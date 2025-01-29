@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,status
 from datetime import datetime, timezone
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-@app.get("/")
+@app.get("/user",status_code=status.HTTP_200_OK)
 def user_info():
     current_datetime = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     return{
