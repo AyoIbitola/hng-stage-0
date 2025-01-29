@@ -26,7 +26,7 @@ Returns user information including email, current datetime in UTC, and GitHub UR
 ## Endpoint URL
 
 ```sh
-    url
+   https://hng-stage-0-production-5e52.up.railway.app/
 
 ```
 
